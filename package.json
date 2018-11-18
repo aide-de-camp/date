@@ -14,9 +14,7 @@
     "build:docs": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll",
-    "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once"
+    "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
     "date-fns": "2.0.0-alpha.25"
@@ -28,8 +26,7 @@
     "jest": "23.6.0",
     "jest-cli": "23.6.0",
     "puppeteer": "1.8.0",
-    "semantic-release": "^15.12.0",
-    "travis-deploy-once": "^5.0.9"
+    "semantic-release": "^15.12.0"
   },
   "repository": {
     "type": "git",

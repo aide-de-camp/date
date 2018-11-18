@@ -2,10 +2,12 @@ language: node_js
 cache: npm
 notifications:
   email: false
-node_js:
-  - '10'
-after_success:
-  - npm run travis-deploy-once "npm run semantic-release"
-branches:
-  only:
-    - master
+node_js: 8
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    - npx semantic-release
+  branches:
+    only:
+      - master

@@ -10,7 +10,7 @@ export class DateRelative {
   /**
    * [Required] The date and time to compare with. The base date is always the equivalent to Date.now().
    */
-  @Prop() datetime: string = '';
+  @Prop() datetime: string;
 
   /**
    * [Optional] A locale for formatting the relative date. If no locale is specified, or if it's not a valid locale,
