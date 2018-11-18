@@ -13,11 +13,23 @@ import '@stencil/core';
 export namespace Components {
 
   interface AdcDateRelative {
-    'date': string;
+    /**
+    * The date and time to compare with. The base date is always the equivalent to Date.now()
+    */
+    'datetime': string;
+    /**
+    * A locale for formatting the relative date. If no locale is specified, or if it's not a valid locale, the component will fallback to the browser's locale.
+    */
     'locale': string;
   }
   interface AdcDateRelativeAttributes extends StencilHTMLAttributes {
-    'date'?: string;
+    /**
+    * The date and time to compare with. The base date is always the equivalent to Date.now()
+    */
+    'datetime'?: string;
+    /**
+    * A locale for formatting the relative date. If no locale is specified, or if it's not a valid locale, the component will fallback to the browser's locale.
+    */
     'locale'?: string;
   }
 }
