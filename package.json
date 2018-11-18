@@ -1,6 +1,6 @@
 {
   "name": "@adc/date",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "A web component to help you format your dates.",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -14,17 +14,26 @@
     "build:docs": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "dependencies": {
     "date-fns": "2.0.0-alpha.25"
   },
   "devDependencies": {
-    "@stencil/core": "~0.15.1"
+    "@stencil/core": "~0.15.1",
+    "@types/jest": "23.3.9",
+    "@types/puppeteer": "1.10.0",
+    "jest": "23.6.0",
+    "jest-cli": "23.6.0",
+    "puppeteer": "1.8.0",
+    "semantic-release": "^15.12.0",
+    "travis-deploy-once": "^5.0.9"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aide-de-camp/date.git"
+    "url": "https://github.com/aide-de-camp/date.git"
   },
   "author": "David Guijarro <guijarro.dav@gmail.com>",
   "license": "MIT",
