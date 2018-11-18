@@ -12,32 +12,50 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface AdcDate {}
-  interface AdcDateAttributes extends StencilHTMLAttributes {}
+  interface AdcDateRelative {
+    /**
+    * [Required] The date and time to compare with. The base date is always the equivalent to Date.now().
+    */
+    'datetime': string;
+    /**
+    * [Optional] A locale for formatting the relative date. If no locale is specified, or if it's not a valid locale, the component will fallback to the browser's locale.
+    */
+    'locale': string;
+  }
+  interface AdcDateRelativeAttributes extends StencilHTMLAttributes {
+    /**
+    * [Required] The date and time to compare with. The base date is always the equivalent to Date.now().
+    */
+    'datetime'?: string;
+    /**
+    * [Optional] A locale for formatting the relative date. If no locale is specified, or if it's not a valid locale, the component will fallback to the browser's locale.
+    */
+    'locale'?: string;
+  }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'AdcDate': Components.AdcDate;
+    'AdcDateRelative': Components.AdcDateRelative;
   }
 
   interface StencilIntrinsicElements {
-    'adc-date': Components.AdcDateAttributes;
+    'adc-date-relative': Components.AdcDateRelativeAttributes;
   }
 
 
-  interface HTMLAdcDateElement extends Components.AdcDate, HTMLStencilElement {}
-  var HTMLAdcDateElement: {
-    prototype: HTMLAdcDateElement;
-    new (): HTMLAdcDateElement;
+  interface HTMLAdcDateRelativeElement extends Components.AdcDateRelative, HTMLStencilElement {}
+  var HTMLAdcDateRelativeElement: {
+    prototype: HTMLAdcDateRelativeElement;
+    new (): HTMLAdcDateRelativeElement;
   };
 
   interface HTMLElementTagNameMap {
-    'adc-date': HTMLAdcDateElement
+    'adc-date-relative': HTMLAdcDateRelativeElement
   }
 
   interface ElementTagNameMap {
-    'adc-date': HTMLAdcDateElement;
+    'adc-date-relative': HTMLAdcDateRelativeElement;
   }
 
 
