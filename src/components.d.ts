@@ -12,6 +12,27 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface AdcDateAgo {
+    /**
+    * [Required] The date and time to compare with. The base date is always the equivalent to Date.now().
+    */
+    'datetime': string;
+    /**
+    * [Optional] A locale for formatting the relative date. If no locale is specified, or if it's not a valid locale, the component will fallback to the browser's locale.
+    */
+    'locale': string;
+  }
+  interface AdcDateAgoAttributes extends StencilHTMLAttributes {
+    /**
+    * [Required] The date and time to compare with. The base date is always the equivalent to Date.now().
+    */
+    'datetime'?: string;
+    /**
+    * [Optional] A locale for formatting the relative date. If no locale is specified, or if it's not a valid locale, the component will fallback to the browser's locale.
+    */
+    'locale'?: string;
+  }
+
   interface AdcDateRelative {
     /**
     * [Required] The date and time to compare with. The base date is always the equivalent to Date.now().
@@ -36,13 +57,21 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'AdcDateAgo': Components.AdcDateAgo;
     'AdcDateRelative': Components.AdcDateRelative;
   }
 
   interface StencilIntrinsicElements {
+    'adc-date-ago': Components.AdcDateAgoAttributes;
     'adc-date-relative': Components.AdcDateRelativeAttributes;
   }
 
+
+  interface HTMLAdcDateAgoElement extends Components.AdcDateAgo, HTMLStencilElement {}
+  var HTMLAdcDateAgoElement: {
+    prototype: HTMLAdcDateAgoElement;
+    new (): HTMLAdcDateAgoElement;
+  };
 
   interface HTMLAdcDateRelativeElement extends Components.AdcDateRelative, HTMLStencilElement {}
   var HTMLAdcDateRelativeElement: {
@@ -51,10 +80,12 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'adc-date-ago': HTMLAdcDateAgoElement
     'adc-date-relative': HTMLAdcDateRelativeElement
   }
 
   interface ElementTagNameMap {
+    'adc-date-ago': HTMLAdcDateAgoElement;
     'adc-date-relative': HTMLAdcDateRelativeElement;
   }
 
