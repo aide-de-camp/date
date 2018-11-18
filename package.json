@@ -2,6 +2,9 @@
   "name": "@adc/date",
   "version": "0.0.0-development",
   "description": "A web component to help you format your dates.",
+  "publishConfig": {
+    "access": "public"
+  },
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
