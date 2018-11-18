@@ -14,7 +14,7 @@
     "build:docs": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "test:watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
     "date-fns": "2.0.0-alpha.25"
