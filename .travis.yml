@@ -8,6 +8,5 @@ deploy:
   skip_cleanup: true
   script:
     - npx semantic-release
-  branches:
-    only:
-      - master
+  on:
+    branch: master
