@@ -15,7 +15,9 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
-  "dependencies": {},
+  "dependencies": {
+    "date-fns": "2.0.0-alpha.25"
+  },
   "devDependencies": {
     "@stencil/core": "~0.15.1"
   },

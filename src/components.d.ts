@@ -12,32 +12,38 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface AdcDate {}
-  interface AdcDateAttributes extends StencilHTMLAttributes {}
+  interface AdcDateRelative {
+    'date': string;
+    'locale': string;
+  }
+  interface AdcDateRelativeAttributes extends StencilHTMLAttributes {
+    'date'?: string;
+    'locale'?: string;
+  }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'AdcDate': Components.AdcDate;
+    'AdcDateRelative': Components.AdcDateRelative;
   }
 
   interface StencilIntrinsicElements {
-    'adc-date': Components.AdcDateAttributes;
+    'adc-date-relative': Components.AdcDateRelativeAttributes;
   }
 
 
-  interface HTMLAdcDateElement extends Components.AdcDate, HTMLStencilElement {}
-  var HTMLAdcDateElement: {
-    prototype: HTMLAdcDateElement;
-    new (): HTMLAdcDateElement;
+  interface HTMLAdcDateRelativeElement extends Components.AdcDateRelative, HTMLStencilElement {}
+  var HTMLAdcDateRelativeElement: {
+    prototype: HTMLAdcDateRelativeElement;
+    new (): HTMLAdcDateRelativeElement;
   };
 
   interface HTMLElementTagNameMap {
-    'adc-date': HTMLAdcDateElement
+    'adc-date-relative': HTMLAdcDateRelativeElement
   }
 
   interface ElementTagNameMap {
-    'adc-date': HTMLAdcDateElement;
+    'adc-date-relative': HTMLAdcDateRelativeElement;
   }
 
 
