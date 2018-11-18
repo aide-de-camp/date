@@ -8,12 +8,12 @@ import { dateLocales } from '../../i18n/date-locales';
 })
 export class DateRelative {
   /**
-   * The date and time to compare with. The base date is always the equivalent to Date.now()
+   * [Required] The date and time to compare with. The base date is always the equivalent to Date.now().
    */
-  @Prop() datetime: string;
+  @Prop() datetime: string = '';
 
   /**
-   * A locale for formatting the relative date. If no locale is specified, or if it's not a valid locale,
+   * [Optional] A locale for formatting the relative date. If no locale is specified, or if it's not a valid locale,
    * the component will fallback to the browser's locale.
    */
   @Prop() locale: string;
