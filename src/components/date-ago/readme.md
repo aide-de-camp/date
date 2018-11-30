@@ -1,6 +1,10 @@
 # adc-date-ago
 
-This web components formats a date and time in terms of distance with the present, like `3 days ago`. Also accepts a future date and time.
+This web components formats a date and time in terms of distance with the present, like _"3 days ago"_. Also accepts a future date and time.
+
+```html
+<adc-date-ago datetime="Nov 22 2018 9:00" locale="es"></adc-date-ago>
+```
 
 <!-- Auto Generated Below -->
 
