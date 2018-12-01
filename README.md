@@ -142,6 +142,7 @@ new Vue({
 ## Component Catalog
 
 - [adc-date-ago](https://github.com/aide-de-camp/pay/tree/master/src/components/date-ago)
+- [adc-date-epoch](https://github.com/aide-de-camp/pay/tree/master/src/components/date-epoch)
 - [adc-date-relative](https://github.com/aide-de-camp/pay/tree/master/src/components/date-relative)
 
 ## Browser support

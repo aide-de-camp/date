@@ -8,6 +8,7 @@ This web components takes a UNIX timestamp and renders it in human-readable form
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property    | Attribute   | Description                                                                                                                                                          | Type     |
@@ -15,6 +16,7 @@ This web components takes a UNIX timestamp and renders it in human-readable form
 | `locale`    | `locale`    | [Optional] A locale for formatting the relative date. If no locale is specified, or if it's not a valid locale, the component will fallback to the browser's locale. | `string` |
 | `timestamp` | `timestamp` | [Required] UNIX timestamp to be converted to a human-readable date.                                                                                                  | `number` |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*
