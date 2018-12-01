@@ -4,11 +4,11 @@
   "description": "A Web Component collection that helps you format your dates.",
   "keywords": [
     "stencil",
-    "stencil components",
+    "stencil-components",
     "jsx",
     "html",
-    "web components",
-    "date formatting",
+    "web-components",
+    "date-formatting",
     "date-fns",
     "datetime",
     "date-format"
