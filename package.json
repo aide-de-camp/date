@@ -1,7 +1,18 @@
 {
   "name": "@adc/date",
   "version": "0.0.0-development",
-  "description": "A web component to help you format your dates.",
+  "description": "A Web Component collection that helps you format your dates.",
+  "keywords": [
+    "stencil",
+    "stencil components",
+    "jsx",
+    "html",
+    "web components",
+    "date formatting",
+    "date-fns",
+    "datetime",
+    "date-format"
+  ],
   "publishConfig": {
     "access": "public"
   },
