@@ -33,6 +33,27 @@ export namespace Components {
     'locale'?: string;
   }
 
+  interface AdcDateEpoch {
+    /**
+    * [Optional] A locale for formatting the relative date. If no locale is specified, or if it's not a valid locale, the component will fallback to the browser's locale.
+    */
+    'locale': string;
+    /**
+    * [Required] UNIX timestamp to be converted to a human-readable date.
+    */
+    'timestamp': number;
+  }
+  interface AdcDateEpochAttributes extends StencilHTMLAttributes {
+    /**
+    * [Optional] A locale for formatting the relative date. If no locale is specified, or if it's not a valid locale, the component will fallback to the browser's locale.
+    */
+    'locale'?: string;
+    /**
+    * [Required] UNIX timestamp to be converted to a human-readable date.
+    */
+    'timestamp'?: number;
+  }
+
   interface AdcDateRelative {
     /**
     * [Required] The date and time to compare with. The base date is always the equivalent to Date.now().
@@ -58,11 +79,13 @@ export namespace Components {
 declare global {
   interface StencilElementInterfaces {
     'AdcDateAgo': Components.AdcDateAgo;
+    'AdcDateEpoch': Components.AdcDateEpoch;
     'AdcDateRelative': Components.AdcDateRelative;
   }
 
   interface StencilIntrinsicElements {
     'adc-date-ago': Components.AdcDateAgoAttributes;
+    'adc-date-epoch': Components.AdcDateEpochAttributes;
     'adc-date-relative': Components.AdcDateRelativeAttributes;
   }
 
@@ -73,6 +96,12 @@ declare global {
     new (): HTMLAdcDateAgoElement;
   };
 
+  interface HTMLAdcDateEpochElement extends Components.AdcDateEpoch, HTMLStencilElement {}
+  var HTMLAdcDateEpochElement: {
+    prototype: HTMLAdcDateEpochElement;
+    new (): HTMLAdcDateEpochElement;
+  };
+
   interface HTMLAdcDateRelativeElement extends Components.AdcDateRelative, HTMLStencilElement {}
   var HTMLAdcDateRelativeElement: {
     prototype: HTMLAdcDateRelativeElement;
@@ -81,11 +110,13 @@ declare global {
 
   interface HTMLElementTagNameMap {
     'adc-date-ago': HTMLAdcDateAgoElement
+    'adc-date-epoch': HTMLAdcDateEpochElement
     'adc-date-relative': HTMLAdcDateRelativeElement
   }
 
   interface ElementTagNameMap {
     'adc-date-ago': HTMLAdcDateAgoElement;
+    'adc-date-epoch': HTMLAdcDateEpochElement;
     'adc-date-relative': HTMLAdcDateRelativeElement;
   }
 
