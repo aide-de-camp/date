@@ -149,6 +149,7 @@ new Vue({
 - Chrome (and all Chromium based browsers)
 - Safari
 - Edge
-- Firefox (64+ only)
+- Firefox
+- IE 11
 
 Web Components, specifically Custom Elements, are natively supported in Chrome and Safari and are coming to both Edge and Firefox. A dynamic polyfill loader is already included in order to only load the polyfills for the browsers that are missing specific features.
